@@ -1,0 +1,162 @@
+/* Estilos generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header button {
+    background-color: #f9f7f4;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Categorías */
+nav {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Buscador */
+#buscador {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#buscador input {
+    width: 200px;
+    padding: 10px;
+}
+
+#buscador button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Productos */
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1; /* Permite que #productos ocupe el espacio disponible */
+    padding-bottom: 20px; /* Agrega un padding inferior para separar del footer */
+}
+
+.producto {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.producto h3 {
+    font-size: 18px;
+}
+
+.producto p {
+    font-size: 14px;
+}
+
+.producto button {
+    background-color: #ab2245;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Carrito */
+#carrito {
+    padding: 20px;
+    flex: 1;
+}
+
+#tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#tabla-carrito th, #tabla-carrito td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+#total {
+    text-align: right;
+    margin-right: 20px;
+}
+
+#total h3 {
+    font-size: 24px;
+}
+
+#comprar-btn, #volver-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#comprar-btn {
+    background-color: #ab2245;
+    color: #fff;
+    border: none;
+}
+
+#volver-btn {
+    background-color: #ab2245;
+    color: #fff;
+    border: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}

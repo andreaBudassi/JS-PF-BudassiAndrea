@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras - ElectroShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>ElectroShop</h1>
+    </header>
+
+    <!-- Carrito de Compras -->
+    <main id="carrito">
+        <h2>Tu Carrito de Compras</h2>
+        <table id="tabla-carrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los items del carrito se cargarán aquí desde JavaScript -->
+            </tbody>
+        </table>
+        <div id="total">
+            <h3>Total: $<span id="total-amount">0</span></h3>
+        </div>
+        <button id="comprar-btn">Comprar</button>
+        <button id="volver-btn">Volver al Catálogo</button>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 ElectroShop - Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
