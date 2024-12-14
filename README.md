@@ -1,6 +1,6 @@
 # ElectroShop - E-commerce de Electrónicos
 
-¡Bienvenido a *ElectroShop*! Este es un proyecto de e-commerce sencillo para la venta de artículos electrónicos, desarrollado como trabajo final para el curso de JavaScript del curso de front-end en CoderHouse.
+¡Bienvenido a **ElectroShop**! Este es un proyecto de e-commerce sencillo para la venta de artículos electrónicos, desarrollado como trabajo final para el curso de JavaScript del curso de front-end en CoderHouse.
 
 ## Descripción del Proyecto
 
@@ -16,12 +16,13 @@ ElectroShop es una tienda en línea donde los usuarios pueden:
 
 El proyecto aplica conocimientos de:
 
-- *HTML y CSS:* Estructura y estilos de las páginas.
-- *JavaScript:* Manipulación del DOM, eventos, JSON y Storage.
+- **HTML y CSS:** Estructura y estilos de las páginas.
+- **JavaScript:** Manipulación del DOM, eventos, JSON, Fetch API y Storage.
+- **Librerías Externas:** Uso de SweetAlert2 para notificaciones.
 
 ## Características Principales
 
-- *Página de Inicio (index.html):*
+- **Página de Inicio (`index.html`):**
   - Visualización de productos con imagen, nombre, categoría, precio y stock.
   - Filtro por categorías (celulares, TV, audio, impresoras, accesorios, cámaras).
   - Buscador de productos.
@@ -29,7 +30,7 @@ El proyecto aplica conocimientos de:
   - Header con nombre de la tienda y mensaje de bienvenida.
   - Footer con información de derechos reservados.
 
-- *Página del Carrito (carrito.html):*
+- **Página del Carrito (`carrito.html`):**
   - Lista de productos agregados al carrito con imagen, nombre, precio y cantidad.
   - Posibilidad de modificar la cantidad de cada producto.
   - Cálculo automático del subtotal y total.
@@ -39,10 +40,12 @@ El proyecto aplica conocimientos de:
 
 ## Tecnologías Utilizadas
 
-- *HTML5* para la estructura de las páginas.
-- *CSS3* para estilos y diseño de la interfaz.
-- *JavaScript (ES6)* para la lógica del negocio y manipulación del DOM.
-- *LocalStorage* para el almacenamiento de datos en el navegador.
+- **HTML5** para la estructura de las páginas.
+- **CSS3** para estilos y diseño de la interfaz.
+- **JavaScript (ES6)** para la lógica del negocio y manipulación del DOM.
+- **Fetch API** para obtener los productos desde un archivo JSON local.
+- **LocalStorage** para el almacenamiento de datos en el navegador.
+- **SweetAlert2** para notificaciones y alertas estilizadas.
 
 ## Estructura del Proyecto
 
@@ -50,6 +53,7 @@ index.html
 carrito.html
 style.css
 script.js
+productos.json
 images/
    edge-fusion.jpg
    tv-samsung.jpg
@@ -59,6 +63,7 @@ images/
 - *carrito.html:* Página del carrito de compras.
 - *style.css:* Hoja de estilos compartida por ambas páginas.
 - *script.js:* Archivo JavaScript con la lógica del sitio.
+- *productos.json:* Archivo JSON donde se almacenan los productos.
 - *images/*: Carpeta con las imágenes de los productos.
 
 ## Instrucciones de Instalación y Ejecución

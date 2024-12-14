@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Mi E-commerce de Electrónicos</title>
     <link rel="stylesheet" href="style.css">
+    <!-- SweetAlert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -12,9 +16,13 @@
         <h1>ElectroShop</h1>
         <p>¡Bienvenido a la mejor tienda de electrónicos!</p>
         <button id="carrito-btn">
-        <svg alt="Ver Carrito" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-          </svg></button>
+            <!-- Icono del carrito -->
+            <svg alt="Ver Carrito" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            </svg>
+        </button>
     </header>
 
     <!-- Categorías -->
@@ -38,14 +46,15 @@
 
     <!-- Catálogo de Productos -->
     <main id="productos">
-        <!-- Los productos se cargarán aquí desde JavaScript -->
+        <!-- Los productos se cargarán aquí desde js -->
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 ElectroShop - Todos los derechos reservados.</p>
+        <p>&copy; 2024 ElectroShop - Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
