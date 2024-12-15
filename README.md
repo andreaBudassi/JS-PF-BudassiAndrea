@@ -107,21 +107,21 @@ cd electroshop
 
 ### JavaScript y DOM
 
-- *Manipulación del DOM:*
+*Manipulación del DOM:*
 - Los productos y el carrito se renderizan dinámicamente en el DOM.
 - Se utilizan eventos para manejar interacciones como clics en botones y cambios en el input de búsqueda.
 
-- *Eventos:*
+*Eventos:*
 - Eventos de clic en botones de categorías, agregar al carrito, modificar cantidades, eliminar productos, y realizar la compra.
 - Evento DOMContentLoaded para inicializar la aplicación según la página actual.
 
-- *Fetch API:*
+*Fetch API:*
 - Los productos se obtienen desde un archivo productos.json utilizando fetch(), lo que simula una petición a un servidor.
 
-- *SweetAlert2:*
+*SweetAlert2:*
 - Se utiliza SweetAlert2 para mejorar la experiencia del usuario al mostrar notificaciones y alertas estilizadas en lugar de los tradicionales alert().
 
-- *Notas Importantes:*
+*Notas Importantes:*
 - Evento DOMContentLoaded para inicializar la aplicación según la página actual.
 
 ## Licencia
