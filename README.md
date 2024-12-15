@@ -63,7 +63,7 @@ images/
 - *carrito.html:* Página del carrito de compras.
 - *style.css:* Hoja de estilos compartida por ambas páginas.
 - *script.js:* Archivo JavaScript con la lógica del sitio.
-- *productos.json:* Archivo JSON donde se almacenan los productos.
+- *productos.json:* Archivo JSON con los datos de los productos.
 - *images/*: Carpeta con las imágenes de los productos.
 
 ## Instrucciones de Instalación y Ejecución
@@ -113,6 +113,15 @@ cd electroshop
 
 - *Eventos:*
 - Eventos de clic en botones de categorías, agregar al carrito, modificar cantidades, eliminar productos, y realizar la compra.
+- Evento DOMContentLoaded para inicializar la aplicación según la página actual.
+
+- *Fetch API:*
+- Los productos se obtienen desde un archivo productos.json utilizando fetch(), lo que simula una petición a un servidor.
+
+- *SweetAlert2:*
+- Se utiliza SweetAlert2 para mejorar la experiencia del usuario al mostrar notificaciones y alertas estilizadas en lugar de los tradicionales alert().
+
+- *Notas Importantes:*
 - Evento DOMContentLoaded para inicializar la aplicación según la página actual.
 
 ## Licencia

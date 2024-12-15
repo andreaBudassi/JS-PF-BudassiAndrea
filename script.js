@@ -4,25 +4,25 @@ let carrito = []
 
 // Función para inicializar los artículos
 function inicializarArticulos() {
-    let articulosGuardados = localStorage.getItem('articulos')
-    if (articulosGuardados) {
-        articulos = JSON.parse(articulosGuardados)
-        mostrarProductos(articulos)
-        inicializarEventos()
-    } else {
-        // Cargar los artículos desde el archivo JSON
-        fetch('productos.json')
-            .then(response => response.json())
-            .then(data => {
-                articulos = data
-                guardarArticulos()
-                mostrarProductos(articulos)
-                inicializarEventos()
-            })
-            .catch(error => {
-                console.error('Error al cargar los productos:', error)
-            })
-    }
+    return new Promise((resolve, reject) => {
+        let articulosGuardados = localStorage.getItem('articulos')
+        if (articulosGuardados) {
+            articulos = JSON.parse(articulosGuardados)
+            resolve()
+        } else {
+            fetch('productos.json')
+                .then(response => response.json())
+                .then(data => {
+                    articulos = data
+                    guardarArticulos()
+                    resolve()
+                })
+                .catch(error => {
+                    console.error('Error al cargar los productos:', error)
+                    reject(error)
+                })
+        }
+    })
 }
 
 // Función para guardar los artículos en el localStorage
@@ -46,6 +46,7 @@ function guardarCarrito() {
 // Función para mostrar los productos en el index
 function mostrarProductos(productos) {
     const contenedor = document.getElementById('productos')
+    if (!contenedor) return // Si no existe el elemento, salir de la función
     contenedor.innerHTML = ''
 
     productos.forEach(producto => {
@@ -113,6 +114,7 @@ function agregarAlCarrito(id) {
 // Función para mostrar los items del carrito en carrito.html
 function mostrarCarrito() {
     const tbody = document.querySelector('#tabla-carrito tbody')
+    if (!tbody) return // Si no existe el elemento, salir de la función
     tbody.innerHTML = ''
 
     let total = 0
@@ -227,19 +229,30 @@ function inicializarEventos() {
 function iniciarIndex() {
     cargarCarrito()
     inicializarArticulos()
+        .then(() => {
+            mostrarProductos(articulos)
+            inicializarEventos()
+        })
+        .catch(error => {
+            console.error('Error al inicializar los artículos:', error)
+        })
 }
 
 // Función para inicializar la página carrito.html
 function iniciarCarrito() {
     cargarCarrito()
     inicializarArticulos()
-    mostrarCarrito()
-
-    // Event Listeners
-    document.getElementById('comprar-btn').addEventListener('click', comprar)
-    document.getElementById('volver-btn').addEventListener('click', () => {
-        window.location.href = 'index.html'
-    })
+        .then(() => {
+            mostrarCarrito()
+            // Event Listeners
+            document.getElementById('comprar-btn').addEventListener('click', comprar)
+            document.getElementById('volver-btn').addEventListener('click', () => {
+                window.location.href = 'index.html'
+            })
+        })
+        .catch(error => {
+            console.error('Error al inicializar los artículos:', error)
+        })
 }
 
 // Inicialización dependiendo de la página
